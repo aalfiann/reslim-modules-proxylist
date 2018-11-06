@@ -19,5 +19,5 @@
 ### Known limitations
  - As free user of **PubProxy**, there is only 100 request a day. So we cached the request per 30minutes to save your quota. We recommend you to buy the premium proxy to get the best experience, realtime and unlimited.
 
-## Note
+### Note
 This **ProxyList** module is currently use **PubProxy API** as main service. We will add other free public proxy service in the future (if any). 
