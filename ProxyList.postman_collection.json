@@ -1,0 +1,519 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ProxyList",
+		"_postman_id": "fd5a3d95-c2a6-eac4-86a3-76d02d7b1ac6",
+		"description": "API Documentation about ProxyList Module.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Info Module",
+			"request": {
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/proxylist/get/info/?apikey={yourapikey}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"proxylist",
+						"get",
+						"info",
+						""
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{yourapikey}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get Info Module\n---\nGet info detail about ProxyList Module"
+			},
+			"response": []
+		},
+		{
+			"name": "Rotate Proxy",
+			"request": {
+				"url": "http://localhost:1337/reSlim/src/api/proxylist/pubproxy/rotate",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Username",
+							"value": "",
+							"type": "text",
+							"description": "Length is 1-50 {alphanumeric,lowercase,required}"
+						},
+						{
+							"key": "Token",
+							"value": "",
+							"type": "text",
+							"description": "Length is 1-250 {required}"
+						},
+						{
+							"key": "Api",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Make unlimited proxy requests."
+						},
+						{
+							"key": "Limit",
+							"value": "",
+							"type": "text",
+							"description": "Optional, How many proxies to list. Default is 20."
+						},
+						{
+							"key": "Level",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Anonymity level (anonymous and elite)."
+						},
+						{
+							"key": "Type",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Proxy protocol (socks4, socks5 and http)."
+						},
+						{
+							"key": "Country",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Country of the proxy (input multiple with separated commas)."
+						},
+						{
+							"key": "Not_country",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Avoid proxy countries (input multiple with separated commas)."
+						},
+						{
+							"key": "Last_check",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Minutes the proxy was last checked (1-1000)."
+						},
+						{
+							"key": "Speed",
+							"value": "",
+							"type": "text",
+							"description": "Optional, How many seconds it takes for the proxy to connect (1-60 in seconds)."
+						},
+						{
+							"key": "Port",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Proxies with a specific port (input multiple with separated commas)."
+						},
+						{
+							"key": "Google",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Google passed proxies."
+						},
+						{
+							"key": "Https",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Proxies which is supports HTTPS request."
+						},
+						{
+							"key": "Post",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Proxies which is supports POST request."
+						},
+						{
+							"key": "Cookies",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Proxies which is supports COOKIES request."
+						},
+						{
+							"key": "Referer",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Proxies which is supports REFERER request."
+						}
+					]
+				},
+				"description": "Rotate Proxy\n---\nGet single rotated proxy."
+			},
+			"response": []
+		},
+		{
+			"name": "Rotate Proxy Public",
+			"request": {
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/proxylist/pubproxy/rotate/public/?apikey={yourapikey}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"proxylist",
+						"pubproxy",
+						"rotate",
+						"public",
+						""
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{yourapikey}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Api",
+							"value": "",
+							"description": "Optional, Make unlimited proxy requests.",
+							"type": "text"
+						},
+						{
+							"key": "Limit",
+							"value": "",
+							"description": "Optional, How many proxies to list. Default is 20.",
+							"type": "text"
+						},
+						{
+							"key": "Level",
+							"value": "",
+							"description": "Optional, Anonymity level (anonymous and elite).",
+							"type": "text"
+						},
+						{
+							"key": "Type",
+							"value": "",
+							"description": "Optional, Proxy protocol (socks4, socks5 and http).",
+							"type": "text"
+						},
+						{
+							"key": "Country",
+							"value": "",
+							"description": "Optional, Country of the proxy (input multiple with separated commas).",
+							"type": "text"
+						},
+						{
+							"key": "Not_country",
+							"value": "",
+							"description": "Optional, Avoid proxy countries (input multiple with separated commas).",
+							"type": "text"
+						},
+						{
+							"key": "Last_check",
+							"value": "",
+							"description": "Optional, Minutes the proxy was last checked (1-1000).",
+							"type": "text"
+						},
+						{
+							"key": "Speed",
+							"value": "",
+							"description": "Optional, How many seconds it takes for the proxy to connect (1-60 in seconds).",
+							"type": "text"
+						},
+						{
+							"key": "Port",
+							"value": "",
+							"description": "Optional, Proxies with a specific port (input multiple with separated commas).",
+							"type": "text"
+						},
+						{
+							"key": "Google",
+							"value": "",
+							"description": "Optional, Google passed proxies.",
+							"type": "text"
+						},
+						{
+							"key": "Https",
+							"value": "",
+							"description": "Optional, Proxies which is supports HTTPS request.",
+							"type": "text"
+						},
+						{
+							"key": "Post",
+							"value": "",
+							"description": "Optional, Proxies which is supports POST request.",
+							"type": "text"
+						},
+						{
+							"key": "Cookies",
+							"value": "",
+							"description": "Optional, Proxies which is supports COOKIES request.",
+							"type": "text"
+						},
+						{
+							"key": "Referer",
+							"value": "",
+							"description": "Optional, Proxies which is supports REFERER request.",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Rotate Proxy Public\n---\nGet single rotated proxy for public access with api key."
+			},
+			"response": []
+		},
+		{
+			"name": "List Proxy",
+			"request": {
+				"url": "http://localhost:1337/reSlim/src/api/proxylist/pubproxy/list",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Username",
+							"value": "",
+							"type": "text",
+							"description": "Length is 1-50 {alphanumeric,lowercase,required}"
+						},
+						{
+							"key": "Token",
+							"value": "",
+							"type": "text",
+							"description": "Length is 1-250 {required}"
+						},
+						{
+							"key": "Api",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Make unlimited proxy requests."
+						},
+						{
+							"key": "Limit",
+							"value": "",
+							"type": "text",
+							"description": "Optional, How many proxies to list. Default is 20."
+						},
+						{
+							"key": "Level",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Anonymity level (anonymous and elite)."
+						},
+						{
+							"key": "Type",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Proxy protocol (socks4, socks5 and http)."
+						},
+						{
+							"key": "Country",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Country of the proxy (input multiple with separated commas)."
+						},
+						{
+							"key": "Not_country",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Avoid proxy countries (input multiple with separated commas)."
+						},
+						{
+							"key": "Last_check",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Minutes the proxy was last checked (1-1000)."
+						},
+						{
+							"key": "Speed",
+							"value": "",
+							"type": "text",
+							"description": "Optional, How many seconds it takes for the proxy to connect (1-60 in seconds)."
+						},
+						{
+							"key": "Port",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Proxies with a specific port (input multiple with separated commas)."
+						},
+						{
+							"key": "Google",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Google passed proxies."
+						},
+						{
+							"key": "Https",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Proxies which is supports HTTPS request."
+						},
+						{
+							"key": "Post",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Proxies which is supports POST request."
+						},
+						{
+							"key": "Cookies",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Proxies which is supports COOKIES request."
+						},
+						{
+							"key": "Referer",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Proxies which is supports REFERER request."
+						}
+					]
+				},
+				"description": "List Proxy\n---\nGet list proxy."
+			},
+			"response": []
+		},
+		{
+			"name": "List Proxy Public",
+			"request": {
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/proxylist/pubproxy/list/public/?apikey={yourapikey}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"proxylist",
+						"pubproxy",
+						"list",
+						"public",
+						""
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{yourapikey}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Api",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Make unlimited proxy requests."
+						},
+						{
+							"key": "Limit",
+							"value": "",
+							"type": "text",
+							"description": "Optional, How many proxies to list. Default is 20."
+						},
+						{
+							"key": "Level",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Anonymity level (anonymous and elite)."
+						},
+						{
+							"key": "Type",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Proxy protocol (socks4, socks5 and http)."
+						},
+						{
+							"key": "Country",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Country of the proxy (input multiple with separated commas)."
+						},
+						{
+							"key": "Not_country",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Avoid proxy countries (input multiple with separated commas)."
+						},
+						{
+							"key": "Last_check",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Minutes the proxy was last checked (1-1000)."
+						},
+						{
+							"key": "Speed",
+							"value": "",
+							"type": "text",
+							"description": "Optional, How many seconds it takes for the proxy to connect (1-60 in seconds)."
+						},
+						{
+							"key": "Port",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Proxies with a specific port (input multiple with separated commas)."
+						},
+						{
+							"key": "Google",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Google passed proxies."
+						},
+						{
+							"key": "Https",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Proxies which is supports HTTPS request."
+						},
+						{
+							"key": "Post",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Proxies which is supports POST request."
+						},
+						{
+							"key": "Cookies",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Proxies which is supports COOKIES request."
+						},
+						{
+							"key": "Referer",
+							"value": "",
+							"type": "text",
+							"description": "Optional, Proxies which is supports REFERER request."
+						}
+					]
+				},
+				"description": "List Proxy Public\n---\nGet list proxy for public access with api key."
+			},
+			"response": []
+		}
+	]
+}
